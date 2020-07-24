@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Meta tags-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Firebase stuff-->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+        <script src="firebase.js"></script>
+
+        <!--Bootstrap & CSS-->
+        <link rel="stylesheet" href="assets\bootstrap.css">
+        <link rel="stylesheet" href="assets\navbar.css">
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+        
+        <!--JS files-->
+        <script src="navbar.js"></script>
+
+        <title>Bhashaflix</title>
+    </head>
+    <body>
+
+        <body id="page-top">
+            <nav class="navbar navbar-light navbar-default bg-primary py-0" id="mainNav">
+                <div class="container-fluid ml-1 ml-xs-3 mx-md-5 mr-5">
+                    <!--Dropdown-->
+                    <div class=" d-md-none d-lg-none h-100 float-left mr-2" id="menu_icon_div">
+                        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')) ; menu();" aria-label="Main Menu">
+                            <svg width="50" height="50" viewBox="0 0 100 100">
+                                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                                <path class="line line2" d="M 20,50 H 80" />
+                                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                            </svg>
+                        </button>
+                    </div>
+    
+                    <a class="navbar-brand float-sm-left mr-auto header-title text-white" id="navbar_title" href="/ml#page-top">Bhashaflix</a>
+    
+                    <!--The row of links for big screens-->
+                    <div class=" d-none d-md-flex align-middle" id="nav_options">
+                        <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" id="dashboard" href="dashboard/signin.html" >Aims</a>
+                        <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="learn.html" >Learn</a>
+                        <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="deploy.html" >Database</a>
+                        <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="deploy.html" >Help Us</a>
+                        <button class=" border border-light bg-transparent px-3" id="sign_in">Sign In</button>
+                        
+                        <!--<div class="col h-100 align-middle">
+                            <a class="nav-link px-2 py-0 header-subtitle border border-light "  id="sign_in" href="#page-top" >Sign In</a>
+                        </div>
+                    -->
+
+                    </div>
+                </div> 
+            </nav>
+    </body>
+</html>
