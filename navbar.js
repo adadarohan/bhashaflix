@@ -16,13 +16,11 @@ function menu(){
     document.getElementById("nav_options").classList.remove("d-none");
     document.getElementById("nav_options").classList.remove("d-md-flex");
     document.getElementById("nav_options").classList.add("w-100");
-    document.getElementById("nav_options").classList.add("bg-white");
     nav_visible = true
   } else{
     document.getElementById("nav_options").classList.add("d-none");
     document.getElementById("nav_options").classList.add("d-md-flex");
     document.getElementById("nav_options").classList.remove("w-100");
-    document.getElementById("nav_options").classList.remove("bg-white");
     nav_visible = false
   }
 }
