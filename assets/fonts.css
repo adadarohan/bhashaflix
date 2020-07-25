@@ -1,0 +1,15 @@
+.heading-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(30px + 2.2vw);
+    line-height: (35px + 2vw);
+    font-weight : 700 ;
+    max-width: min-content;
+}
+
+.text-2-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(13px + 0.5vw);
+    line-height: (10px + 1vw);
+    font-weight : 400 ;
+    max-width: 370px;
+}

@@ -1,0 +1,24 @@
+#get-started {
+    border-radius: 45px;
+    background: -webkit-gradient(linear, left top, right top, from(#30cfd0), to(#330867));
+    background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#learn-more {
+    border-radius: 45px;
+    border-width: 1.5px;
+}
+
+.button-font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight : 500 ;
+    max-width: max-content;
+}
+
+#section-1-button {
+    max-width: max-content;
+}
