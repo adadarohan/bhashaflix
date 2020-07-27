@@ -33,3 +33,7 @@ div#section-1-button a#learn-more:hover{
 .wave-container > svg {
     display: block;
 }
+
+#section-2-para {
+    color:#000000
+}
