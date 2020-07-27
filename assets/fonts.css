@@ -11,5 +11,11 @@
     font-size: calc(13px + 0.5vw);
     line-height: (10px + 1vw);
     font-weight : 400 ;
-    max-width: 370px;
+}
+
+.button-font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(17px + 0.55vw);
+    font-weight : 500 ;
+    max-width: max-content;
 }
