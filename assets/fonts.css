@@ -27,10 +27,17 @@
     max-width: max-content;
 }
 
+.subheading-2-font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(20px + 1.3vw);
+    font-weight : 500 ;
+    max-width: max-content;
+}
 
 .text-font {
     font-family: 'Montserrat', sans-serif;
     font-size: calc(11px + 0.5vw);
     font-weight : 300 ;
-    max-width: 1000px ;
+    max-width: max-content;
+
 }

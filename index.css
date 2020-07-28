@@ -19,7 +19,7 @@
 #learn-more {
     border-radius: 45px;
     border-width: 1.6px;
-     color : #ffffff
+    color : #ffffff
 }
 
 div#section-1-button a#learn-more:hover{
@@ -35,5 +35,23 @@ div#section-1-button a#learn-more:hover{
 }
 
 #section-2-para {
-    color:#000000
+    color:#000000;
+    max-width: 1000px ;
+}
+
+.section-2-card-text {
+    max-width: 290px ;
+}
+
+.section-2-card-title {
+    background: -webkit-gradient(linear, left top, right top, from(#02C6D6), to(#037FD5));
+    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-2-card {
+    max-width:max-content;
+    max-height : 278px;
 }
