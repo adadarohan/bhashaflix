@@ -67,3 +67,69 @@
     font-size: 1rem;
     font-weight : 400 ;
 }
+
+#footer-icons {
+    max-width: max-content;
+}
+
+.btn-social {
+    background-color: transparent;
+    width : 40px;
+    height : 40px;
+    color : white;
+    font-size : 25px;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+    .btn-social {
+        background-color: transparent;
+        width : 58px;
+        height : 58px;
+        color : white;
+        font-size : 27px;
+        border-width: 1px;
+        border-color: white ;
+    }
+    
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+    
+    .btn-email:hover
+    {
+        background-color: #44c456;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+    
+    .btn-youtube:hover
+    {
+        background-color: #e52d27;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+    
+    .btn-instagram:hover
+    {
+        background: linear-gradient(to top right, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 100%);
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+    
+    .btn-twitter:hover
+    {
+        background-color: #55acee;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+  }

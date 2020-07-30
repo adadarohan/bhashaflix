@@ -59,3 +59,14 @@ div#section-1-button a#learn-more:hover{
 .team-member {
     max-width : 300px;
 }
+
+#section-4-para {
+    max-width : 1000px;
+    color: #000000;
+}
+
+#get-started-bottom {
+    border-radius: 45px;
+    max-width: max-content;
+    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
+}

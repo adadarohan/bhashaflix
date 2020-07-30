@@ -20,6 +20,13 @@
     max-width: max-content;
 }
 
+.button-2-font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(21px + 0.55vw);
+    font-weight : 600 ;
+    max-width: max-content;
+}
+
 .subheading-font{
     font-family: 'Montserrat', sans-serif;
     font-size: calc(25px + 2vw);
