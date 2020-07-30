@@ -55,3 +55,7 @@ div#section-1-button a#learn-more:hover{
     max-width:max-content;
     max-height : 278px;
 }
+
+.team-member {
+    max-width : 300px;
+}

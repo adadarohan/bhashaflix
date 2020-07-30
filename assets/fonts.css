@@ -22,7 +22,7 @@
 
 .subheading-font{
     font-family: 'Montserrat', sans-serif;
-    font-size: calc(30px + 1.9vw);
+    font-size: calc(25px + 2vw);
     font-weight : 500 ;
     max-width: max-content;
 }
@@ -31,6 +31,14 @@
     font-family: 'Montserrat', sans-serif;
     font-size: calc(20px + 1.3vw);
     font-weight : 500 ;
+    max-width: max-content;
+}
+
+
+.subheading-3-font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(13px + 0.6vw);
+    font-weight : 700 ;
     max-width: max-content;
 }
 
