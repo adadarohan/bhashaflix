@@ -1,0 +1,72 @@
+#header-para {
+    max-width: 355px;
+}
+
+#get-started {
+    border-radius: 45px;
+    max-width: max-content;
+}
+
+#get-started-text {
+    background: -webkit-gradient(linear, left top, right top, from(#02C6D6), to(#037FD5));
+    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#learn-more {
+    border-radius: 45px;
+    border-width: 1.6px;
+    color : #ffffff
+}
+
+div#section-1-button a#learn-more:hover{
+    color : #434343
+}
+
+#section-1-button {
+    max-width: max-content;
+}
+
+.wave-container > svg {
+    display: block;
+}
+
+#section-2-para {
+    color:#000000;
+    max-width: 1000px ;
+}
+
+.section-2-card-text {
+    max-width: 290px ;
+}
+
+.section-2-card-title {
+    background: -webkit-gradient(linear, left top, right top, from(#02C6D6), to(#037FD5));
+    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-2-card {
+    max-width:max-content;
+    max-height : 278px;
+}
+
+.team-member {
+    max-width : 300px;
+}
+
+#section-4-para {
+    max-width : 1000px;
+    color: #000000;
+}
+
+#get-started-bottom {
+    border-radius: 45px;
+    max-width: max-content;
+    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
+}
