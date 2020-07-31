@@ -70,3 +70,139 @@ div#section-1-button a#learn-more:hover{
     max-width: max-content;
     background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
 }
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+}
+
+.menu:focus {outline:0;}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-width: 7 !important;
+    transition: stroke-dasharray  600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset : -134;
+    stroke-width: 6;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30 ;
+    stroke-width: 6;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.header-title {
+    font-family: 'Lobster', cursive;
+    font-size: 1.9rem;
+}
+
+.header-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight : 400 ;
+    color: #ffffff;
+    min-width: max-content;
+}
+
+.header-subtitle:hover{
+    color : #E5E5E5
+}
+
+
+#sign_in {
+    border-radius: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight : 400 ;
+}
+
+#footer-icons {
+    max-width: max-content;
+}
+
+.btn-social {
+    background-color: transparent;
+    width : 40px;
+    height : 40px;
+    color : white;
+    font-size : 25px ;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+    .btn-social {
+        background-color: transparent;
+        width : 58px;
+        height : 58px;
+        color : white;
+        font-size : 27px;
+        border-width: 1px;
+        border-color: white ;
+    }
+
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+
+    .btn-email:hover
+    {
+        background-color: #44c456;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+
+    .btn-youtube:hover
+    {
+        background-color: #e52d27;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+
+    .btn-instagram:hover
+    {
+        background: linear-gradient(to top right, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 100%);
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+
+    .btn-twitter:hover
+    {
+        background-color: #55acee;
+        font-size : 30px;
+        border-width: 0px;
+        color : white;
+    }
+}
