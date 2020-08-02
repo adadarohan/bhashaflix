@@ -10,7 +10,7 @@
 
 .line {
     fill: none;
-    stroke: white;
+    stroke: black;
     stroke-width: 7 !important;
     transition: stroke-dasharray  600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -46,18 +46,19 @@
 .header-title {
     font-family: 'Lobster', cursive;
     font-size: 1.9rem;
+    color: black;
 }
 
 .header-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     font-weight : 400 ;
-    color: #ffffff;
+    color: black;
     min-width: max-content;
 }
 
 .header-subtitle:hover{
-    color : #E5E5E5
+    color : #434343;
 }
 
 
@@ -66,6 +67,13 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight : 400 ;
+    color : black;
+}
+
+#sign_in:hover {
+    color : white ;
+    background : linear-gradient(to right, #02C6D6 , #037FD5) ;
+    border-color : transparent;
 }
 
 #footer-icons {

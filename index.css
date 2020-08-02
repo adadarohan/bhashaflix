@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #header-para {
     max-width: 355px;
 }
@@ -53,7 +57,7 @@ div#section-1-button a#learn-more:hover{
 
 .section-2-card {
     max-width:max-content;
-    max-height : 278px;
+    max-height : max-content;
 }
 
 .team-member {

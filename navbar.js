@@ -3,13 +3,20 @@ var nav_visible = false
 
 
 //Change the dashboard redirect if the user is signed in 
-/*
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    document.getElementById("dashboard").href = "/ml/dashboard/dashboard.html";
+    learn_elements = document.getElementById("learn");
+    learn_elements.href = "/bhashaflix/learn"
+    document.getElementById("sign_in").classList.add("d-none");
+    var photoURL = user.photoURL;
+    document.getElementById("user_image").src = photoURL;
+    document.getElementById("user_image").crossOrigin = "anonymous";
+
+    document.getElementById("user_image").classList.remove("d-none");
   }
 })
-*/
+
 
 function menu(){
   if(nav_visible == false) {
