@@ -10,8 +10,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     learn_elements.href = "/bhashaflix/learn"
     document.getElementById("sign_in").classList.add("d-none");
     var photoURL = user.photoURL;
-    document.getElementById("user_image").src = photoURL;
-    document.getElementById("user_image").crossOrigin = "anonymous";
+    if (photoURL != null) {
+      document.getElementById("user_image").src = photoURL;
+      document.getElementById("user_image").crossOrigin = "anonymous";
+    }
 
     document.getElementById("user_image").classList.remove("d-none");
   }

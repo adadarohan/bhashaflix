@@ -14,12 +14,13 @@ var uiConfig = {
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
         if (authResult.additionalUserInfo.isNewUser == true){
-            analytics.logEvent('new_user')
+            analytics.logEvent('new_user');
+            console.log("new");
         }
         
         return true;
         },
-        
+
         uiShown: function() {
         // The widget is rendered.
 
