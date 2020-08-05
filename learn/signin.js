@@ -16,7 +16,7 @@ var uiConfig = {
         analytics.logEvent('login');
 
         if (authResult.additionalUserInfo.isNewUser == true){
-            analytics.logEvent('first_visit', { sign_up: 1})
+            analytics.logEvent('new_user')
             console.log("new");
         }
         

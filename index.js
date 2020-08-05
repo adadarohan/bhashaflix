@@ -6,5 +6,3 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 })
 
-analytics.logEvent('add_payment_info');
-console.log("logged event");
