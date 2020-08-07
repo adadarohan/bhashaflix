@@ -13,11 +13,11 @@ var uiConfig = {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
-        analytics.logEvent('login');
 
         if (authResult.additionalUserInfo.isNewUser == true){
             analytics.logEvent('new_user')
-            console.log("new");
+        } else {
+            analytics.logEvent('login');
         }
         
         return true;
