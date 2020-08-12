@@ -9,6 +9,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     learn_elements = document.getElementById("learn");
     learn_elements.href = "/bhashaflix/learn"
     document.getElementById("sign_in").classList.add("d-none");
+    document.getElementById("login").classList.add("d-none");
+
     var photoURL = user.photoURL;
     if (photoURL != null) {
       document.getElementById("user_image").src = photoURL;

@@ -6,6 +6,7 @@ firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(funct
     alert(errorCode + errorMessage)
 });
 
+
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var uiConfig = {
     callbacks: {
@@ -13,9 +14,9 @@ var uiConfig = {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
-
+        
         if (authResult.additionalUserInfo.isNewUser == true){
-            analytics.logEvent('new_user')
+            analytics.logEvent('new_user');
         } else {
             analytics.logEvent('login');
         }
