@@ -1,3 +1,33 @@
 .max {
     max-width : max-content;
 }
+
+#languages-search{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: #434343;
+    color : black;
+}
+
+#languages-search:focus{
+    border-bottom-color: #02C6D6 ;
+    border-bottom-width: 2px;
+}
+
+
+.custom-font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(25px + 1.8vw);
+    font-weight : 600 ;
+    max-width: max-content;
+}
+
+.custom-2-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 0.5vw);
+    line-height: (10px + 1vw);
+    font-weight : 400 ;
+}
