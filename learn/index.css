@@ -31,3 +31,11 @@
     line-height: (10px + 1vw);
     font-weight : 400 ;
 }
+
+#sort-by {
+    background-color: #E7E7E7;
+}
+
+.text-black {
+    color:black;
+}

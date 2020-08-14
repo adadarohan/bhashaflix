@@ -4,8 +4,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         var ss;
         var first_name ;  
         var name = user.displayName;
-        name_prefixes = ['Hi ', 'Welcome back ' , 'Hello ', 'Hey ']
-        prefixes = ['Hi there', 'Hello there', 'Hey there' , 'Hey you' , 'Welcome back']
+        name_prefixes = ['Hi ', 'Hello ', 'Hey ']
+        prefixes = ['Hi there', 'Hello there', 'Hey there' , 'Hey you']
         compliments = ['You look beautiful' , 'Have an amazing day' , 'Be fearless' , 'Learn something new', 'Dream big' , 'Believe in yourself' , 'Make today amazing']
         if (name != null) {
             var name_parts = name.split(" ");
