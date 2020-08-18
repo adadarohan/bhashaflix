@@ -19,4 +19,15 @@ firebase.auth().onAuthStateChanged(function(user) {
         document.getElementById("compliment").innerHTML = ss;
 
     }
-  })
+})
+
+function flip ( card_id , state) {
+    if (state) {
+        document.getElementById(card_id).classList.add("d-none");
+        document.getElementById(card_id + "-back").classList.remove("d-none");
+    }
+    else {
+        document.getElementById(card_id).classList.remove("d-none");
+        document.getElementById(card_id + "-back").classList.add("d-none");
+    }
+}
