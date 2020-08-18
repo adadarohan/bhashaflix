@@ -1,0 +1,27 @@
+.all-card {
+    max-width : 250px;
+    height : 300px;;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transition: 0.3s;
+}
+
+.all-card-title {
+    background: -webkit-gradient(linear, left top, right top, from(#02C6D6), to(#037FD5));
+    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 600px) {
+    .all-card {
+        max-width : 313px;
+        height : 354px;;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        transition: 0.3s;
+    }
+}
+
+.all-card:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
