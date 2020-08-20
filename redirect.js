@@ -1,5 +1,7 @@
 firebase.auth().onAuthStateChanged(function(user) {
-    if (user == false) {
-        window.location.href = "/bhashaflix";
+    if (user) {
+        //user is logged in
+    } else {
+        window.location.href = "/bhashaflix/learn/signin.html";
     }
 });
