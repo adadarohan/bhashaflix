@@ -1,12 +1,3 @@
-//Set the login persistance to local
-firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    alert(errorCode + errorMessage)
-});
-
-
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var uiConfig = {
     callbacks: {
