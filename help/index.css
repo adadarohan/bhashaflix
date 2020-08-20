@@ -25,3 +25,10 @@
 .all-card:hover {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
+
+.custom-font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(25px + 1.8vw);
+    font-weight : 600 ;
+    max-width: max-content;
+}
