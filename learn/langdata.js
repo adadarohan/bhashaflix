@@ -1,0 +1,2 @@
+var languages = ['example' , 'example2']
+var lessons = [ ['Alphabets' , 'Numbers' , 'Pronunciation' , 'Phrases' , 'Test 1' , 'Common nouns'  , 'Common adjectives'  , 'Common verbs' , 'Sentence structure' , 'Test 2' ] , ['Alphabets' , 'Numbers' , 'Pronunciation' , 'phrases' , 'Test 1' , 'Common nouns'  , 'Common adjectives'  , 'Common verbs' , 'Sentence structure' , 'Test 2', 'songs' , 'movies' , 'videos' , 'books' ] ]
