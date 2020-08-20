@@ -10,27 +10,23 @@
 
         <!--Firebase stuff-->
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
-        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />  
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
         <script src="../firebase.js"></script>
-        <script src="signin.js"></script>
 
         <!--Bootstrap & CSS-->
-        <link rel="stylesheet" href="../assets/bootstrap.css">
-        <link rel="stylesheet" href="../assets/fonts.css">
-        <link rel="stylesheet" href="../assets/navbar.css">
-        <link rel="stylesheet" href="signin.css">
+        <link rel="stylesheet" href="../../../assets/bootstrap.css">
+        <link rel="stylesheet" href="../../../assets/fonts.css">
+        <link rel="stylesheet" href="../../../assets/navbar.css">
 
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
         
         <!--Icons-->
-        <script src="https://kit.fontawesome.com/9f7fc9917e.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/9f7fc9917e.js" crossorigin="anonymous" SameSite=None ></script>
 
         <!--JS files-->
-        <script src="../navbar.js"></script>
+        <script defer src="../../../navbar.js"></script>
 
         <title>Bhashaflix</title>
     </head>
@@ -52,28 +48,25 @@
 
                 <!--The row of links for big screens-->
                 <div class=" d-none d-md-flex align-middle" id="nav_options">
-                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="../aims/" >Aims</a>
-                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle learn"  href="signin.html" >Learn</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="../../../aims" >Aims</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" id="learn" href="../../learn/signin.html" >Learn</a>
                     <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="#page-top" >Database</a>
-                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="../help/index.html" >Help Us</a>                    
-                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " id="login" href="signin.html" >Login</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="../../../help" >Help Us</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " id="login" href="../../signin.html" >Login</a>
                     <div class="pl-4 row d-none d-md-flex">
-                        <a href="#page-top" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
+                        <a href="../../signin.html" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
                     </div>
+                    <a class="my-auto d-none d-md-inline-block" href="../../settings.html">
+                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\assets\images\user-circle.svg" id="user_image">
+                    </a>
                     <hr class="d-md-none border-dark rounded-pill">
 
                 </div>
             </div> 
         </nav>
-        
-        <section class="pt-5 pb-5" id="sign-in">
-            <div class="my-auto mx-auto">
-                <h2 class="subheading-font pb-4 text-center max mx-auto">Sign Up / Login</h2>
-                <div id="firebaseui-auth-container"></div>
-            </div>
-            
-        </section>
-        
+
+
+
 
         <footer>
             <div class="container-fluid mt-4 bg-primary">
