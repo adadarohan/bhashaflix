@@ -95,6 +95,14 @@
 
 }
 
+.custom-5-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight : 300 ;
+    line-height: 30px;
+    max-width: max-content;
+}
+
 .language {
     border-radius: 45px;
     border-width: 1.6px;
@@ -103,4 +111,12 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#example-progress {
+    width: 25% ;
+}
+
+.lang-bar {
+    height: 20px;
 }
