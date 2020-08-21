@@ -12,12 +12,13 @@
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
-        <script src="../firebase.js"></script>
+        <script src="../../../firebase.js"></script>
 
         <!--Bootstrap & CSS-->
         <link rel="stylesheet" href="../../../assets/bootstrap.css">
         <link rel="stylesheet" href="../../../assets/fonts.css">
         <link rel="stylesheet" href="../../../assets/navbar.css">
+        <link rel="stylesheet" href="intro.css">
 
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
@@ -57,7 +58,7 @@
                         <a href="../../signin.html" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
                     </div>
                     <a class="my-auto d-none d-md-inline-block" href="../../settings.html">
-                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\assets\images\user-circle.svg" id="user_image">
+                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\..\..\assets\images\user-circle.svg" id="user_image">
                     </a>
                     <hr class="d-md-none border-dark rounded-pill">
 
@@ -67,9 +68,25 @@
 
         <!--Header Stuff-->
         <section>
-            <div class="container-fluid">
-                
+            <div class="container-fluid pt-4">
+                <div class="row p-0 px-5">
+                    <div class="col-md-2 d-none d-md-block">
+                        <a class="mx-auto d-block" href="../../index.html">
+                            <img class=" rounded-circle" height="45" width ="45" src="../../../assets/images/back.svg">
+                        </a>
+                    </div>
+                    <div class="col col-md-10">
+                        <img class="mx-auto img-fluid" src="../../../assets/images/languages/example/intro.svg" id="intro-img">
+                    </div>
+                </div>
             </div >
+        </section>
+
+        <section>
+            <div class="container-fluid">
+                <h1 class="mx-auto text-center subheading-font" id="title">Example</h1>
+
+            </div>
         </section>
 
 
