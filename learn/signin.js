@@ -5,9 +5,16 @@ var uiConfig = {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
-        
+        var user = firebase.auth().currentUser;
+        var uid = user.uid;
         if (authResult.additionalUserInfo.isNewUser == true){
+            console.log(uid);
             analytics.logEvent('new_user');
+            db.collection("user-progress").doc(uid).set({
+                example : 0,
+                example2: 0
+            })
+
         } else {
             analytics.logEvent('login');
         }
