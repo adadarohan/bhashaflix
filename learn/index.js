@@ -33,8 +33,8 @@ firebase.auth().onAuthStateChanged(function(user) {
                 });
             } else {
                 usersRef.set({
-                    example : 0 ,
-                    example2: 0
+                    example : -1 ,
+                    example2: -1
                 }).then(function() {
                     console.log("Document written");
         
@@ -87,7 +87,7 @@ function started (progress) {
     //Array of progress sorted by language array
     //var progress = [5 , 0] ; 
     for (var index = 0 ; index < progress.length ; index++) {
-        if (progress[index] > 0) {
+        if (progress[index] >= 0) {
             var id = languages[index] ;
             var percent = Math.round((progress[index] / lessons[index].length) * 100);
             next_lesson = lessons[index][progress[index]] ;
