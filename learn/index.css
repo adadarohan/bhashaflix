@@ -49,8 +49,8 @@
 }
 
 .all-card {
-    max-width : 250px;
-    height : 300px;;
+    max-width : 270px;
+    height : 315px;;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     transition: 0.3s;
 }
