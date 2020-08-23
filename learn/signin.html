@@ -13,7 +13,6 @@
         <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />  
-        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
         <script src="../firebase.js"></script>
         <script src="signin.js"></script>
@@ -54,13 +53,16 @@
                 <!--The row of links for big screens-->
                 <div class=" d-none d-md-flex align-middle" id="nav_options">
                     <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="../aims/" >Aims</a>
-                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle learn"  href="signin.html" >Learn</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" id="learn" href="signin.html" >Learn</a>
                     <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="#page-top" >Database</a>
                     <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="../help/index.html" >Help Us</a>                    
                     <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " id="login" href="signin.html" >Login</a>
                     <div class="pl-4 row d-none d-md-flex">
                         <a href="#page-top" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
                     </div>
+                    <a class="my-auto d-none d-md-inline-block" href="settings.html">
+                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\assets\images\user-circle.svg" id="user_image">
+                    </a>
                     <hr class="d-md-none border-dark rounded-pill">
 
                 </div>

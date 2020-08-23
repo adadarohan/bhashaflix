@@ -19,6 +19,34 @@ firebase.auth().onAuthStateChanged(function(user) {
         document.getElementById("name").innerHTML = fs;
         document.getElementById("compliment").innerHTML = ss;
 
+        var uid = user.uid;
+        var db = firebase.firestore();
+
+        const usersRef = db.collection('user-progress').doc(uid);
+        usersRef.get()
+        .then((docSnapshot) => {
+            if (docSnapshot.exists) {
+                usersRef.onSnapshot((doc) => {
+                    var all_langs = doc.data();
+                    var langdata = [all_langs.example , all_langs.example2 ];
+                    started(langdata);
+                });
+            } else {
+                usersRef.set({
+                    example : 0 ,
+                    example2: 0
+                }).then(function() {
+                    console.log("Document written");
+        
+                })
+                .catch(function(error) {
+                    console.error("Error adding document: " ,  error);
+        
+                }); 
+            }
+        });
+
+
     }
 })
 
@@ -55,9 +83,9 @@ document.getElementById('languages-search').onkeydown = function(e){
 };
 
 //Show the progress bar and set the progress for started langages
-function started () {
+function started (progress) {
     //Array of progress sorted by language array
-    var progress = [5 , 0] ; 
+    //var progress = [5 , 0] ; 
     for (var index = 0 ; index < progress.length ; index++) {
         if (progress[index] > 0) {
             var id = languages[index] ;
@@ -72,4 +100,3 @@ function started () {
     }
 }
 
-started();
