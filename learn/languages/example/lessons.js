@@ -6,12 +6,11 @@ function next(lesson) {
         example : lesson
     },{ merge: true }).then(function() {
         console.log("Document written");
-
+        window.location.href = "index.html";
     })
     .catch(function(error) {
         console.error("Error adding document: " ,  error);
     }); 
 
-    window.location.href = "index.html";
 
 }
