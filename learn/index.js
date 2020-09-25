@@ -76,7 +76,8 @@ function search (query) {
 
 //Call search function when enter is pressed
 document.getElementById('languages-search').onkeydown = function(e){
-    if(e.keyCode == 13){
+    console.log(e.code);
+    if(e.code == "Enter"){
       query = document.getElementById("languages-search").value ;
       search(query)
     }
