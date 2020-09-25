@@ -1,9 +1,15 @@
-#prog-col {
-    background-color: #e4e4e4;
+.done {
+    color : rgb(123, 255, 47);
 }
 
-.circle {
-    width: 55px;
-    height: 55px;
-    background-color : aqua ;
+.done:hover {
+    color : rgb(123, 255, 47);
+}
+
+.not-done {
+    color : grey;
+}
+
+.not-done:hover {
+    color : grey;
 }
