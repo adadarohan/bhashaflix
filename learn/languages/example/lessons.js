@@ -6,11 +6,13 @@ function next(lesson) {
         example : lesson
     },{ merge: true }).then(function() {
         console.log("Document written");
-        window.location.href = "index.html";
+        confetti.start(3000);
+        setTimeout(function () {
+            window.location.href = "index.html";
+        }, 5000);
     })
     .catch(function(error) {
         console.error("Error adding document: " ,  error);
     }); 
-
 
 }
