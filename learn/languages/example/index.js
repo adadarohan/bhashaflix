@@ -9,14 +9,18 @@ firebase.auth().onAuthStateChanged(function(user) {
             var lnum = querySnapshot.data().example
             document.getElementById("next_up").innerHTML = lessons[0][lnum] ;
             document.getElementById("next_up_row").classList.remove("d-none");
-            document.getElementById("next_up_href").href = "lesson_" + toString(lnum) + "_1.html";
+            plus = lnum + 1
+            document.getElementById("next_up_href").href = "lesson" + plus.toString() + "_1.html";
             if(lnum > 0) {
-                for (let index = 0; index <= lnum; index++) {
-                    document.getElementById(lnum).classList.remove("not-done"); 
-                    document.getElementById(lnum).classList.add("done");  
-                }
-            }
 
+                for (let index = 1; index <= lnum; index++) {
+                    var element = document.getElementById(lnum) ;
+                    console.log(lnum , index);
+                    element.classList.remove("not-done"); 
+                    element.classList.add("done");
+                }
+            
+            }
         });
         
     }
