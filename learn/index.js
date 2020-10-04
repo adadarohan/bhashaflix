@@ -28,13 +28,13 @@ firebase.auth().onAuthStateChanged(function(user) {
             if (docSnapshot.exists) {
                 usersRef.onSnapshot((doc) => {
                     var all_langs = doc.data();
-                    var langdata = [all_langs.example , all_langs.example2 ];
+                    var langdata = [all_langs.example , all_langs.dogri ];
                     started(langdata);
                 });
             } else {
                 usersRef.set({
                     example : -1 ,
-                    example2: -1
+                    dogri: -1
                 }).then(function() {
                     console.log("Document written");
         
