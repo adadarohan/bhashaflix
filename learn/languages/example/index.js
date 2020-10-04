@@ -12,14 +12,12 @@ firebase.auth().onAuthStateChanged(function(user) {
             plus = lnum + 1
             document.getElementById("next_up_href").href = "lesson" + plus.toString() + "_1.html";
             if(lnum > 0) {
+                for ( var i = 1 ; i <= lnum ; i ++){
+                    var ele = document.getElementById(i.toString()); 
+                    ele.classList.add("done") ;
+                    ele.classList.remove("not-done") ;
 
-                for (let index = 1; index <= lnum; index++) {
-                    var element = document.getElementById(lnum) ;
-                    console.log(lnum , index);
-                    element.classList.remove("not-done"); 
-                    element.classList.add("done");
                 }
-            
             }
         });
         
