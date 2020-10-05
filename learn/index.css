@@ -42,7 +42,7 @@
 
 .all-card-title {
     background: -webkit-gradient(linear, left top, right top, from(#02C6D6), to(#037FD5));
-    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%);
+    background: linear-gradient(to right, #02C6D6 0%, #037FD5 100%) ;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
