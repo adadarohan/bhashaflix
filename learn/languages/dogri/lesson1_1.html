@@ -30,6 +30,7 @@
         <!--JS files-->
         <script defer src="../../../navbar.js"></script>
         <script defer src="lessons.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
 
 
         <title>Bhashaflix</title>
@@ -69,37 +70,33 @@
             </div> 
         </nav>
 
-        <!--Header Stuff-->
-        <section>
-            <div class="container-fluid pt-4">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                      </li>
-                      <li class="page-item active"><a class="page-link" href="lesson1_1.html">1</a></li>
-                      <li class="page-item"><a class="page-link" href="lesson1_2.html">2</a></li>
-                      <li class="page-item"><a class="page-link" href="lesson1_3.html">3</a></li>
-                      <li class="page-item"><a class="page-link" href="lesson1_4.html">4</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="lesson1_2.html">Next</a>
-                      </li>
-                    </ul>
-                  </nav>
-            </div >
-        </section>
+        <!--Body Stuff-->
+    
 
         <section>
             <div class="container-fluid p-2 px-md-5">
                 <h1 class="mx-auto text-center subheading-font pb-3" id="title">Alphabets</h1>
                 <p class="text-font px-1 px-md-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate nec nisl a luctus. Ut sed turpis aliquam, ultricies odio nec, egestas dolor. Vivamus lorem justo, malesuada at quam vel, dapibus rhoncus lacus. Cras aliquet eu risus eget volutpat. Cras pharetra bibendum facilisis. Proin viverra dui a risus scelerisque consectetur. Mauris efficitur, mauris ac efficitur aliquet, elit quam bibendum augue, non interdum justo leo non eros. Praesent fermentum nulla ut augue elementum, in aliquet libero mollis. Phasellus eget arcu sit amet tortor fringilla ultricies. Praesent egestas varius sapien, non faucibus justo rutrum sed. Donec turpis velit, semper ut erat sit amet, fringilla fermentum enim. Sed finibus eleifend arcu ut gravida. Nunc eleifend leo lorem, at lacinia ex varius eget. Fusce eget tortor ac mauris eleifend mattis.
+                    The more modern variation of this language, as well as its numbers, is depicted in the Devanagari alphabet given below. Note: the pronunciation of the same is given in English. 
                 </p >
-                <p class="text-font px-1 px-md-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate nec nisl a luctus. Ut sed turpis aliquam, ultricies odio nec, egestas dolor. Vivamus lorem justo, malesuada at quam vel, dapibus rhoncus lacus. Cras aliquet eu risus eget volutpat. Cras pharetra bibendum facilisis. Proin viverra dui a risus scelerisque consectetur. Mauris efficitur, mauris ac efficitur aliquet, elit quam bibendum augue, non interdum justo leo non eros. Praesent fermentum nulla ut augue elementum, in aliquet libero mollis. Phasellus eget arcu sit amet tortor fringilla ultricies. Praesent egestas varius sapien, non faucibus justo rutrum sed. Donec turpis velit, semper ut erat sit amet, fringilla fermentum enim. Sed finibus eleifend arcu ut gravida. Nunc eleifend leo lorem, at lacinia ex varius eget. Fusce eget tortor ac mauris eleifend mattis.                </p >
+                <img src="../../../assets/images/languages/dogri/alphabet.jpeg" class="mx-auto img-fluid d-block">
             </div>
         </section>
 
+        <!--Button-->
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 p-0"></div>
+                    <div class="col-12 col-md-2 p-0">
+                        <a href="#" onclick="next(1);return false;" class="btn rounded-pill bg-primary text-white subheading-3-font px-4 my-5">
+                            Finish
+                            <img src="../../../assets/images/arrow_right_white.svg" class="pl-4" height="51" width="45" alt="right arrow icon">
+                        </a>
+                    </div>
+                </div >
+            </div>
+        </section>
 
         <footer>
             <div class="container-fluid mt-4 bg-primary">

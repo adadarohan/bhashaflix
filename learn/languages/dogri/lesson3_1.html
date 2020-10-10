@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Meta tags-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Firebase stuff-->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+        <script src="../../../firebase.js"></script>
+
+        <!--Bootstrap & CSS-->
+        <link rel="stylesheet" href="../../../assets/bootstrap.css">
+        <link rel="stylesheet" href="../../../assets/fonts.css">
+        <link rel="stylesheet" href="../../../assets/navbar.css">
+        <link rel="stylesheet" href="intro.css">
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        
+        <!--Icons-->
+        <script src="https://kit.fontawesome.com/9f7fc9917e.js" crossorigin="anonymous" SameSite=None ></script>
+
+        <!--JS files-->
+        <script defer src="../../../navbar.js"></script>
+        <script defer src="lessons.js"></script>
+
+
+        <title>Bhashaflix</title>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-light navbar-default py-0" id="mainNav">
+            <div class="container-fluid ml-1 ml-xs-3 mx-md-5 mr-5 px-0">
+                <!--Dropdown-->
+                <div class=" d-md-none d-lg-none h-100 float-left mr-2" id="menu_icon_div">
+                    <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')) ; menu();" aria-label="Main Menu">
+                        <svg width="50" height="50" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                </div>
+
+                <a class="navbar-brand float-sm-left mr-auto header-title" id="navbar_title" href="/bhashaflix">Bhashaflix</a>
+
+                <!--The row of links for big screens-->
+                <div class=" d-none d-md-flex align-middle" id="nav_options">
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="../../../aims" >Aims</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" id="learn" href="../../learn/signin.html" >Learn</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="#page-top" >Database</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="../../../help" >Help Us</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " id="login" href="../../signin.html" >Login</a>
+                    <div class="pl-4 row d-none d-md-flex">
+                        <a href="../../signin.html" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
+                    </div>
+                    <a class="my-auto d-none d-md-inline-block" href="../../settings.html">
+                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\..\..\assets\images\user-circle.svg" id="user_image">
+                    </a>
+                    <hr class="d-md-none border-dark rounded-pill">
+
+                </div>
+            </div> 
+        </nav>
+
+        <!--Header Stuff-->
+        <section>
+            <div class="container-fluid pt-4">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="lesson3_1.html">1</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson3_2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson3_3.html">3</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson3_4.html">4</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="lesson3_2.html">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div >
+        </section>
+
+        <section>
+            <div class="container-fluid p-2 px-md-5">
+                <h1 class="mx-auto text-center subheading-font pb-3" id="title">Conversational Phrases</h1>
+                <p class="text-font px-1 px-md-3">
+                    In order to be well versed in any language across the globe, it is imperative we examine some key words and phrases, which are an irreplaceable part of daily conversations. Dogri is no exception to the norm (in this case), and below are some common words and phrases that are sure to help you converse with locals in this dialect. 
+                </p>
+                <div class="table-responsive"> 
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead><tr><th title="Field #1">English</th>
+                        <th title="Field #2">Dogri (Devanagri)</th>
+                        <th title="Field #3">Transliteration</th>
+                        <th title="Field #4">Note</th>
+                        </tr></thead>
+                        <tbody><tr>
+                        <td>Hello (to a Hindu)</td>
+                        <td>नमस्ते</td>
+                        <td>Namastē</td>
+                        <td>The word is often complemented by a gesture involving joining hands</td>
+                        </tr>
+                        <tr>
+                        <td>Hello (to a Hindu elder)</td>
+                        <td>पैरिपे</td>
+                        <td>pairipē</td>
+                        <td>I touch your feet</td>
+                        </tr>
+                        <tr>
+                        <td>Hello (to a Sikh)</td>
+                        <td>सस्रीयाकाल</td>
+                        <td>sasrīyākāl</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Bye</td>
+                        <td>चंगा पी</td>
+                        <td>caṁga pī</td>
+                        <td>Okay then</td>
+                        </tr>
+                        <tr>
+                        <td>How are you? (informal)</td>
+                        <td>के आल ऐ?</td>
+                        <td>kē āl ai</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>How are you? (formal)</td>
+                        <td>तुंदा के आल ऐ?</td>
+                        <td>tunda kē āl ai</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I am fine.</td>
+                        <td>आऊँ खरा आँ।</td>
+                        <td>āū khara ā</td>
+                        <td>Nasal sound in &#39;ū&#39; in the first syllable and &#39;ā&#39; in the last syllable</td>
+                        </tr>
+                        <tr>
+                        <td>Thank you!</td>
+                        <td>शुक्रिया/ धन्नवाद</td>
+                        <td>śhukriyā/ tanvād</td>
+                        <td>The former is derived from Arabic &quot;shukriyat&quot; and the latter is the formal Sanskrit derived form. The former is more commonly used.</td>
+                        </tr>
+                        <tr>
+                        <td>What is your name?</td>
+                        <td>तुंदा के नांऽ ऐ?</td>
+                        <td>tunda kē nā ai</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>My name is ____</td>
+                        <td>मेरा नांऽ .... ऐ</td>
+                        <td>mēra nā .... ai</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Please</td>
+                        <td>कृपा</td>
+                        <td>kripā</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Excuse me (begging pardon)</td>
+                        <td>माफ़ करेओ</td>
+                        <td>māf karēō</td>
+                        <td>Forgive me</td>
+                        </tr>
+                        <tr>
+                        <td>I am Sorry.</td>
+                        <td>मी माफ़ करेओ।</td>
+                        <td>mi māf karēō</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I can&#39;t speak Dogri.</td>
+                        <td>मिगी डोगरी नी आन्दी ऐ।</td>
+                        <td>migī ḍōgrī nī āndi ai</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I can speak some Dogri.</td>
+                        <td>मिगी थोड़ी ञई डोगरी आन्दी ऐ</td>
+                        <td>migī thōṛī jaī ḍōgrī nī āndi ai</td>
+                        <td>The &#39;j&#39;(ञ) sounds somewhere between ja(ज) and ya(य).</td>
+                        </tr>
+                        <tr>
+                        <td>Do you speak English?</td>
+                        <td>तुस अंग्रेजी गलानदे हो।</td>
+                        <td>tus agarēzī galāndē ō</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I don&#39;t understand.</td>
+                        <td>मिगी सम्झ नि लगी।</td>
+                        <td>migī samj ni lagī</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Speak more slowly</td>
+                        <td>आस्ता गलाओ</td>
+                        <td>āstā galāo</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Where are you from?</td>
+                        <td>तुस कुथे दे हो?</td>
+                        <td>tus kuthē dē ō</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I&#39;m from ...</td>
+                        <td>मै ... थमां हा।</td>
+                        <td>mai ... thmā ā</td>
+                        <td>Nasal sound complements both ā&#39;s</td>
+                        </tr>
+                        <tr>
+                        <td>Where is the toilet?</td>
+                        <td>शौचालय कुथे ऐ?</td>
+                        <td>śocalya kuthē ai</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>What time is it?</td>
+                        <td>टैम के ओआदा ऐ?</td>
+                        <td>taim kē oādā ai</td>
+                        <td> </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container-fluid mt-4 bg-primary">
+                <div class="text-center pt-4">
+                    <div class="btn-group mx-auto d-inline-block" id="footer-icons">
+                        <a href="#" class=" btn btn-social btn-email rounded-circle mx-1 mx-md-3">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-facebook rounded-circle mx-1 mx-md-3">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-instagram rounded-circle mx-1 mx-md-3">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-twitter rounded-circle mx-1 mx-md-3">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-youtube rounded-circle mx-1 mx-md-3">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="text-2-font text-center text-white mx-auto pt-4 m-0 pb-2">&copy; Lingo Files 2020. All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>
