@@ -7,7 +7,7 @@ var nav_visible = false
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     learn_elements = document.getElementById("learn");
-    learn_elements.href = "bhashaflix/learn"
+    learn_elements.href = "/bhashaflix/learn"
     document.getElementById("sign_in").classList.add("d-none");
     document.getElementById("login").classList.add("d-none");
 
