@@ -9,7 +9,7 @@ function next(lesson) {
         confetti.start(3000);
         setTimeout(function () {
             window.location.href = "index.html";
-        }, 5000);
+        }, 3000);
     })
     .catch(function(error) {
         console.error("Error adding document: " ,  error);
