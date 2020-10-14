@@ -94,7 +94,13 @@ function started (progress) {
             next_lesson = lessons[index][progress[index]] ;
             document.getElementById(id + "-language").href = "languages/" + id ;
             document.getElementById(id + "-progress").style.width  = percent + '%';
-            document.getElementById(id + "-next-lesson").innerHTML = percent + "% Complete <br> Next up - " + next_lesson;
+            var str = "";
+            if (progress[index] < lessons[index].length){
+                str = percent + "% Complete <br> Next up - " + next_lesson ;
+            } else{
+                str = percent + "% Complete <br>";
+            }
+            document.getElementById(id + "-next-lesson").innerHTML = str;
             document.getElementById(id + "-not-started").classList.add("d-none");
             document.getElementById(id + "-started").classList.remove("d-none");
         }
