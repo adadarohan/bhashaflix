@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Meta tags-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Firebase stuff-->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+        <script src="../../../firebasesetup.js"></script>
+
+        <!--Bootstrap & CSS-->
+        <link rel="stylesheet" href="../../../assets/bootstrap.css">
+        <link rel="stylesheet" href="../../../assets/fonts.css">
+        <link rel="stylesheet" href="../../../assets/navbar.css">
+        <link rel="stylesheet" href="intro.css">
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        
+        <!--Icons-->
+        <script src="https://kit.fontawesome.com/9f7fc9917e.js" crossorigin="anonymous" SameSite=None ></script>
+
+        <!--JS files-->
+        <script defer src="../../../navbar.js"></script>
+        <script defer src="lessons.js"></script>
+
+
+        <title>Bhashaflix</title>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-light navbar-default py-0" id="mainNav">
+            <div class="container-fluid ml-1 ml-xs-3 mx-md-5 mr-5 px-0">
+                <!--Dropdown-->
+                <div class=" d-md-none d-lg-none h-100 float-left mr-2" id="menu_icon_div">
+                    <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')) ; menu();" aria-label="Main Menu">
+                        <svg width="50" height="50" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                </div>
+
+                <a class="navbar-brand float-sm-left mr-auto header-title" id="navbar_title" href="https://bhashaflix.web.app">Bhashaflix</a>
+
+                <!--The row of links for big screens-->
+                <div class=" d-none d-md-flex align-middle" id="nav_options">
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="../../../aims" >Aims</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" id="learn" href="../../learn/signin.html" >Learn</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="#page-top" >Database</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="../../../help" >Help Us</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " id="login" href="../../signin.html" >Login</a>
+                    <div class="pl-4 row d-none d-md-flex">
+                        <a href="../../signin.html" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
+                    </div>
+                    <a class="my-auto d-none d-md-inline-block" href="../../settings.html">
+                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\..\..\assets\images\user-circle.svg" id="user_image">
+                    </a>
+                    <hr class="d-md-none border-dark rounded-pill">
+
+                </div>
+            </div> 
+        </nav>
+
+        <!--Header Stuff-->
+        <section>
+            <div class="container-fluid pt-4">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="lesson16_1.html">1</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson16_2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson16_3.html">3</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson16_4.html">4</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="lesson16_2.html">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div >
+        </section>
+
+  
+
+        <section>
+            <div class="container-fluid p-2 px-md-5">
+                <h1 class="mx-auto text-center subheading-font pb-3" id="title">Adjectives</h1>
+                <p class="text-font px-1 px-md-3">
+                    Often assuming the role of words describing a noun, you are likely to find adjectives useful when referring to a specific person, place or thing. Below is a comprehensive list of some adjectives you should always keep in handy!                 
+                </p>
+
+                <p class="text-font px-1 px-md-3">
+                    Classification: <br>
+                    Adjectives in Dogri are classified under four main heads – Qualitative, Numeral, Quantitative and Demonstrative.<br>
+                    <br>
+                    (i) Qualitative Adjectives:<br>
+                    Qualitative adjectives describe the condition, quality, shape, colour, place etc. of things or persons. Hence there are seven sub-types of qualitative adjectives – <br><br>
+                        (a) दलेर / dəler /  ‘courageous’,  चंगा / cəŋga / ‘good’, शिक्षत /ʃikʃət / ‘educated’ etc.<br>
+                    
+                        (b) गोरा / gora / ‘fair’, काला / kala / ‘black’, सूहा / su ʹa / ‘red’  etc.<br>
+                    
+                        (c) गोल / gol / ‘round’, चौरस / cɔrəs / ‘square’, मुट्टा / mūʈʈa /  ‘fat’ etc.<br>
+                    
+                        (d) नमां / nəmã/ ‘new’, पराना / pərana / ‘old’, प्राचीन / pracin / ‘ancient’ etc.<br>
+                    
+                        (e) ग्रांई / graĩ /  ‘villager’, कश्मीरी / kəʃmiri /  ‘Kashmiri’, शैह्रू /ʃɛ ʹru /  ‘of city’ etc.<br>
+                    
+                        (f) कनजोर  / kəməjor / ‘weak’, खुश / khūʃ / ‘happy’, दुआस  / dūas / ‘sad’ etc.<br>
+                    Qualitative adjectives also describe the faults and weaknesses of the persons or things such as कमीना / kəmina / ‘mean’ , बुरा / būra / ‘bad’, भ्रश्ट / prəʹʃʈə/ ‘corrupt’ etc. <br><br>
+                    (ii) Numeral Adjectives:
+                    Numeral adjectives indicate numbers – definite or indefinite. Thus these are two main types of numeral adjectives in Dogri.
+                    There are five sub categories of definite adjectives – cardinal, ordinal, multiplicative, collective.
+                    (a) Cardinals:
+                    Cardinals are used for counting and these also precede the nouns they qualify. Following are the cardinal numbers in Dogri:-
+                    1 – 100
+                    Fractional cardinals are पौना / səʋa / ‘a quarter less’, सवा / səʋa /’with a quarter’, ड़ेढ /ɖe ʹɖ/ ‘one and half’, साढ़े / sàɖe / ‘with a half’ etc.
+                    (b) Ordinals:
+                    Ordinals are used for indicating order in a series such as पैह्ला /pɛ ʹla / ‘first’, दूआ / dua / ‘second’, चौथा / cɔtha / ‘fourth’ etc.
+                    (c) Multiplicatives:
+                    Such adjectives indicate multiplication of cardinals e.g. दोह्रा /do ʹra / ‘double’, चौह्रा / cɔ ʹra / ‘four times/four fold’ etc.
+                    (d) Collectives:
+                    The cardinal number from 1-10 are used as collectives e.g. दोऐ /doɛ / ‘both’, चारै / carɛ/ ‘all four’ etc.
+                    Indefinite numerals:
+                    Certain pairs of numerals denote approximation and such numerals are called indefinite numerals e.g. किस / kiʃ / ‘some, a few’, केई / keĩ / ‘many, several’, सब्भै / sə ʹbbɛ/ ‘all’ etc.
+                    Indefinite numerals are also formed by adding some definite numerals with indefinite numerals e.g.
+                    (a) कोई + Cardinals = कोई दस / koi dəs / ‘only ten’ etc.
+                    (b) Plural of big numbers ज्हारां बरे /jaʹrã bə ʹre/ ‘thousands of years’, लक्खा रपेऽ / ləkkhã-rəpe:/ ‘Lacs of rupees’, करोड़ां लोक / kəroṛã lok / ‘million of people’.
+                    (c) By repeating single cardinal: लक्ख-लक्ख / ləkkhã- ləkkhã / ‘lac-lac, बीह्-बीह् / bi ʹ - bi ʹ/ ‘ twenty-twenty’
+                    (d) By using two different cardinals: चाली-बताली साल / cali -bətali sal / ‘some forty years’.
+                    (iii) Quantitative:
+                    Nouns denoting measure, weight etc. when preceded by numerals or by adjectives is used as adjectives of quantity e.g.
+                        दो मीटर कपड़ा / do miʈər kəpəṛa / ‘two meter cloth’
+                    
+                        इक क्विंटल चौल / ik kʋiɳʈəl cɔl / ‘one quintal rice’
+                    
+                        दो कप  काफी / do kəp kafi / ‘two cup coffee’
+                    Quantitative are also of two types – definite and indefinite. There is least difference between indefinite numerals and indefinite quantitatives. When indefinite numerals precede uncountable material nouns exp. then these function as indefinite quantitative and when these precede common nouns then these function as indefinite numerals such as -- किस जागत / kiʃ jagət / ‘some boys’, मते गलास / məte gəlas / ‘many tumblers’.
+                    (iv)Demonstratives:
+                    Demonstratives are also called pronominal adjective as these are formed from pronouns. Almost all pronouns are used as adjectives with qualifying nouns following them e.g.:
+                        a) मेरी कताब  / meri kətab / ‘my book’ (genitive of first person)
+                    
+                                  तेरा झोला / tera cὸla / ‘your bag’ (genitive of second person)
+                    
+                                  ओह्दी धी / o ʹdi tì / ‘her daughter’ (genitive of third person)
+                    
+                        (b) एह् कुड़ी / eʹ kūṛi /  ‘This girl’, ओह् जागत / o ʹ jagət /   that boy
+                    
+                        (c) कोई कुड़ी / koi kūṛi /‘Any girl’, किस कम्म / kiʃ kəmmə / ‘some work’
+                    
+                        (d) कुन आदमी / kū ʹn adəmi  /‘Which man’, केह्ड़ी चीज / ke ʹṛi cij / ‘ what thing’
+                    
+                        (e) केह् समां  / ke ʹ səmã / What time, कुन आदमी   /kū ʹn adəmi/   which man
+                    
+                        (f) अपना कम्म /əpəna kəmmə/ ‘Own work’,अपने लोक / əpəne lok/ ‘own people’ etc.
+                    Pronominal adjectives not only function as demonstrative adjectives but also as qualitative as well as quantitative e.g.
+                    As Qualitative:
+                        Pronoun			Form		Adjectives
+                    
+                        एह / e ʹ/ ‘This’		इस / is/		इयै नेहा / i ʹɛ ne ʹa /  ‘like this’
+                    
+                        ओह /o ʹ/ ‘That’		उस /ūs/ 		उऐ नेहा /ū ʹɛ ne ʹa/ like that
+                    
+                        जो /jo/ Who,which		जिस /jis/		जनेहा /jəneaʹ / as, (so) correlative
+                    
+                        कुन  /kū ʹn/   		किस /kis/		कनेहा /kəneaʹ/  how
+                    As Quantitatives:
+                        Pronoun			Form		Adjectives
+                    
+                    
+                        एह् /e ʹ/ ‘This’	   	इस /is/		इन्ना /inna/ ‘This much’
+                    
+                        ओह् /o ʹ/ ‘That’		उस /ūs/		उन्ना /ūnna/ ‘That much’
+                    
+                        जो /jo/ ‘Who, which’  		जिस /jis/	 	जिन्ना /jinna/   ‘As much’
+                    
+                        कुन  /kū ʹn/ ‘Who’		कुस /kūs/		किन्ना /kinna/ ‘How much’
+                    Comparison of Adjectives
+                    In Dogri the sense of comparative and superlative degree is expressed generally by using postposition शा/कोला/थमां /ʃa kola thəmã/. When the comparison is between two things or persons only these postpositions are used and when comparison is made with all things or persons then सब/सारें/सभनें /səb/ or /sarẽ/ or /sə ʹbənẽ/ precede these case signs.
+                    Comparative Degree
+                        कुड़ी जागतै शा शैल ऐ / kūṛi jagətɛ  ʃa ʃɛl ɛ / ‘The girl is more beautiful than boy’.
+                    
+                        रस्सी तारै कोसा लम्मी ही  / rəssi tarɛ kola ləmmihi / ‘The rope was longer than the wire’.
+                    Superlative degree
+                        /एह् कुड़ी सारें शा शैल ऐ  / e ʹ kūṛi sarẽ ʃa ʃɛl ɛ / ‘This girl is the most beautiful’.
+                    bIcca / Ica / ca is also used to express the sense of superiority or inferiority of a thing or person when compared with two or more.
+                    Comparative Degree
+                    इनें दौनें चा कुन लम्मा ऐ ? /inẽ donẽ ca kūʹn ləmma ẽ/ ‘Who is taller between these two?’
+                    
+                    सारें बिच्चा केह्ड़ा फुल्ल शैल हा ? /Sarẽ bIcca ke ʹṛa phūllə ʃɛl hã?/ ‘Which flower was beautiful amongst all?’
+                    
+                </p>
+
+                <div class="table-responsive"> 
+                    <table class="table table-bordered table-hover table-condensed">
+                        <tbody><tr>
+                        <td>औना</td>
+                        <td>ɔna</td>
+                        <td>To Come</td>
+                        </tr>
+                        <tr>
+                        <td>करना</td>
+                        <td>kərəna</td>
+                        <td>To do</td>
+                        </tr>
+                        <tr>
+                        <td>आखना / गलाना</td>
+                        <td>akhəna/gəlana</td>
+                        <td>To say</td>
+                        </tr>
+                        <tr>
+                        <td>खाना</td>
+                        <td>khana</td>
+                        <td>To Eat</td>
+                        </tr>
+                        <tr>
+                        <td>टुराना / चलना</td>
+                        <td>ʈūrəna</td>
+                        <td>To walk</td>
+                        </tr>
+                        <tr>
+                        <td>जाना</td>
+                        <td>jana</td>
+                        <td>To go</td>
+                        </tr>
+                        <tr>
+                        <td>बलगना</td>
+                        <td>bələgəna</td>
+                        <td>To wait</td>
+                        </tr>
+                        <tr>
+                        <td>तरना</td>
+                        <td>tərəna</td>
+                        <td>To swim</td>
+                        </tr>
+                        <tr>
+                        <td>हस्सना / मुस्काना</td>
+                        <td>əʹssəna/mūskana</td>
+                        <td>To Laugh/ To smile</td>
+                        </tr>
+                        <tr>
+                        <td>बड्ढना</td>
+                        <td>bə ʹɖɖəna</td>
+                        <td>To Bite / To cut</td>
+                        </tr>
+                        <tr>
+                        <td>उड्डना</td>
+                        <td>ūɖɖəna</td>
+                        <td>To Fly</td>
+                        </tr>
+                        <tr>
+                        <td>बेचना</td>
+                        <td>becəna</td>
+                        <td>To Sell</td>
+                        </tr>
+                        <tr>
+                        <td>दिक्खना</td>
+                        <td>dikkhəna</td>
+                        <td>To See</td>
+                        </tr>
+                        <tr>
+                        <td>लिखना</td>
+                        <td>likhəna</td>
+                        <td>To Write</td>
+                        </tr>
+                        <tr>
+                        <td>देना</td>
+                        <td>dena</td>
+                        <td>To Give</td>
+                        </tr>
+                        <tr>
+                        <td>लैना</td>
+                        <td>lɛna</td>
+                        <td>To Take</td>
+                        </tr>
+                        <tr>
+                        <td>बोलना / कूना</td>
+                        <td>boləna</td>
+                        <td>To Speak</td>
+                        </tr>
+                        <tr>
+                        <td>जानना</td>
+                        <td>janəna</td>
+                        <td>To Know</td>
+                        </tr>
+                        <tr>
+                        <td>समझना</td>
+                        <td>səməjə ʹna</td>
+                        <td>To Understand</td>
+                        </tr>
+                        <tr>
+                        <td>खड़ोना</td>
+                        <td>khəṛona</td>
+                        <td>To Stand</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container-fluid mt-4 bg-primary">
+                <div class="text-center pt-4">
+                    <div class="btn-group mx-auto d-inline-block" id="footer-icons">
+                        <a href="#" class=" btn btn-social btn-email rounded-circle mx-1 mx-md-3">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-facebook rounded-circle mx-1 mx-md-3">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-instagram rounded-circle mx-1 mx-md-3">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-twitter rounded-circle mx-1 mx-md-3">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a href="#" class=" btn btn-social btn-youtube rounded-circle mx-1 mx-md-3">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="text-2-font text-center text-white mx-auto pt-4 m-0 pb-2">&copy; Bhashaflix 2020. All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

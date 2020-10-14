@@ -120,3 +120,7 @@
 .lang-bar {
     height: 20px;
 }
+
+#example {
+    display:none;
+}
