@@ -1,4 +1,5 @@
 function next(lesson) {
+    analytics.logEvent('lesson_completed');
     var user = firebase.auth().currentUser; 
     var uid = user.uid;
     var db = firebase.firestore();
