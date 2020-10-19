@@ -4,7 +4,7 @@ function next(lesson) {
     var uid = user.uid;
     var db = firebase.firestore();
     db.collection('user-progress').doc(uid).set({
-        dogri : lesson
+        tulu : lesson
     },{ merge: true }).then(function() {
         console.log("Document written");
         confetti.start(3000);

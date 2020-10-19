@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         const usersRef = db.collection('user-progress').doc(uid);
         usersRef.get().then((querySnapshot) => {
             //CHANGE LANG NAME
-            var lnum = querySnapshot.data().dogri
+            var lnum = querySnapshot.data().tulu
             if(lnum < lessons[1].length ) {
                 document.getElementById("next_up").innerHTML = lessons[1][lnum] ;
                 document.getElementById("next_up_row").classList.remove("d-none");
