@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Meta tags-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Bhashflix is a free and open source platform, dedicated towards teaching and documenting endangered languages from around the world.">
+        <meta name="keywords" content="Bhahshaflix , Bhasha , Flix , Learn Language , Learn , Lanaguages , Endangered Languages , The Shri Ram School , Rohan Kapur , Yuvaan M. Bery , Giya Sood , Maya Ghosh , Nitika Khungar , Dogri , Konkani , Tulu , Kurukh , Free , Open Source">
+        <meta name="author" content="Giya Sood , Maya Ghosh , Nitika Khungar , Rohan Kapur and Yuvaan M. Bery">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Firebase stuff-->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+        <script src="../../../firebasesetup.js"></script>
+
+        <!--Bootstrap & CSS-->
+        <link rel="stylesheet" href="../../../assets/bootstrap.css">
+        <link rel="stylesheet" href="../../../assets/fonts.css">
+        <link rel="stylesheet" href="../../../assets/navbar.css">
+        <link rel="stylesheet" href="intro.css">
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        
+        <!--Icons-->
+        <script src="https://kit.fontawesome.com/9f7fc9917e.js" crossorigin="anonymous" SameSite=None ></script>
+
+        <!--JS files-->
+        <script defer src="../../../navbar.js"></script>
+        <script defer src="lessons.js"></script>
+
+
+        <title>Bhashaflix</title>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-light navbar-default py-0" id="mainNav">
+            <div class="container-fluid ml-1 ml-xs-3 mx-md-5 mr-5 px-0">
+                <!--Dropdown-->
+                <div class=" d-md-none d-lg-none h-100 float-left mr-2" id="menu_icon_div">
+                    <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')) ; menu();" aria-label="Main Menu">
+                        <svg width="50" height="50" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                </div>
+
+                <a class="navbar-brand float-sm-left mr-auto header-title" id="navbar_title" href="https://bhashaflix.web.app">Bhashaflix</a>
+
+                <!--The row of links for big screens-->
+                <div class=" d-none d-md-flex align-middle" id="nav_options">
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="../../../aims" >Aims</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" id="learn" href="../../learn/signin.html" >Learn</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="https://bit.ly/33Vl4zN" >Database</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="../../../help" >Help Us</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " id="login" href="../../signin.html" >Login</a>
+                    <div class="pl-4 row d-none d-md-flex">
+                        <a href="../../signin.html" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
+                    </div>
+                    <a class="my-auto d-none d-md-inline-block" href="../../settings.html">
+                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\..\..\assets\images\user-circle.svg" id="user_image">
+                    </a>
+                    <hr class="d-md-none border-dark rounded-pill">
+
+                </div>
+            </div> 
+        </nav>
+
+        <!--Header Stuff-->
+        <section>
+            <div class="container-fluid pt-4">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="lesson4_1.html">1</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson4_2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson4_3.html">3</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson4_4.html">4</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="lesson4_2.html">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div >
+        </section>
+
+        <section>
+            <div class="container-fluid p-2 px-md-5">
+                <h1 class="mx-auto text-center subheading-font pb-3" id="title">Problem Phrases</h1>
+ 
+                <div class="table-responsive"> 
+                    <table class="table table-bordered table-hover table-condensed">
+                        <tbody><tr>
+                        <td>Leave me alone.</td>
+                        <td>मी कल्ला छठ्ठो।</td>
+                        <td>mī kallā chaṭhō</td>
+                        </tr>
+                        <tr>
+                        <td>Someone please help me!</td>
+                        <td>कोई मेरी मदद करो।</td>
+                        <td>koī mērī madad karō</td>
+                        </tr>
+                        <tr>
+                        <td>Fire!</td>
+                        <td>आग !</td>
+                        <td>āg (Falling tone)</td>
+                        </tr>
+                        <tr>
+                        <td>I am lost.</td>
+                        <td>आऊँ गवचिये दा हां।</td>
+                        <td>aūm̐ gvāciē da ha</td>
+                        </tr>
+                        <tr>
+                        <td>I have lost my purse.</td>
+                        <td>मेरा पर्स ग्वाचिए दा ऐ।</td>
+                        <td>mēra pars (purse) ai</td>
+                        </tr>
+                        <tr>
+                        <td>I have lost my wallet.</td>
+                        <td>मेरा बटुआ ग्वाचिए दा ऐ।</td>
+                        <td>mēra baṭuā gvāciē da aiṁ.</td>
+                        </tr>
+                        <tr>
+                        <td>I have lost my watch.</td>
+                        <td>मेरी कड़ी ग्वाचिए दी ऐ।</td>
+                        <td>mērī kaṛī gvāciē dī ai</td>
+                        </tr>
+                        <tr>
+                        <td>My things have been stolen.</td>
+                        <td>मेरी चिजां चोरी होई हे दी ऐ।</td>
+                        <td>mērī cijāṁ cōrī oī ē dī ai</td>
+                        </tr>
+                        <tr>
+                        <td>I&#39;m sick.</td>
+                        <td>अ&#39; ऊं बमार आँ l</td>
+                        <td>aŪṀ bamār am̐</td>
+                        </tr>
+                        <tr>
+                        <td>I have been injured.</td>
+                        <td>मी लगी दी ऐ।</td>
+                        <td>mī lagī dī ai</td>
+                        </tr>
+                        <tr>
+                        <td>I need a doctor.</td>
+                        <td>मी डॉक्टर दी लोड ऐ।</td>
+                        <td>mi ḍokṭar (doctor) dī lōḍ ai</td>
+                        </tr>
+                        <tr>
+                        <td>Please</td>
+                        <td>कृपा</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Excuse me (begging pardon)</td>
+                        <td>माफ़ करेओ</td>
+                        <td>Forgive me</td>
+                        </tr>
+                        <tr>
+                        <td>I am Sorry.</td>
+                        <td>मी माफ़ करेओ।</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I can&#39;t speak Dogri.</td>
+                        <td>मिगी डोगरी नी आन्दी ऐ।</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I can speak some Dogri.</td>
+                        <td>मिगी थोड़ी ञई डोगरी आन्दी ऐ</td>
+                        <td>The &#39;j&#39;(ञ) sounds somewhere between ja(ज) and ya(य).</td>
+                        </tr>
+                        <tr>
+                        <td>Do you speak English?</td>
+                        <td>तुस अंग्रेजी गलानदे हो।</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I don&#39;t understand.</td>
+                        <td>मिगी सम्झ नि लगी।</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Speak more slowly</td>
+                        <td>आस्ता गलाओ</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>Where are you from?</td>
+                        <td>तुस कुथे दे हो?</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>I&#39;m from ...</td>
+                        <td>मै ... थमां हा।</td>
+                        <td>Nasal sound complements both ā&#39;s</td>
+                        </tr>
+                        <tr>
+                        <td>Where is the toilet?</td>
+                        <td>शौचालय कुथे ऐ?</td>
+                        <td> </td>
+                        </tr>
+                        <tr>
+                        <td>What time is it?</td>
+                        <td>टैम के ओआदा ऐ?</td>
+                        <td> </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container-fluid mt-4 bg-primary">
+                <div class="text-center pt-4">
+                    <div class="btn-group mx-auto d-inline-block" id="footer-icons">
+                            <a href="mailto:bhashaflix@gmail.com" class=" btn btn-social btn-email rounded-circle mx-1 mx-md-3">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                            <a href="https://www.facebook.com/bhasha.flix" class=" btn btn-social btn-facebook rounded-circle mx-1 mx-md-3">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/bhashaflix/?hl=en" class=" btn btn-social btn-instagram rounded-circle mx-1 mx-md-3">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://twitter.com/bhashaflix" class=" btn btn-social btn-twitter rounded-circle mx-1 mx-md-3">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+
+                            <a href="https://github.com/adadarohan/bhashaflix" class=" btn btn-social btn-youtube rounded-circle mx-1 mx-md-3">
+                                <i class="fab fa-github"></i>
+                            </a>
+                    </div>
+                </div>
+                <p class="text-2-font text-center text-white mx-auto pt-4 m-0 pb-2">&copy; Bhashaflix 2020. All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+.done {
+    color : rgb(123, 255, 47);
+}
+
+.done:hover {
+    color : rgb(123, 255, 47);
+}
+
+.not-done {
+    color : grey;
+}
+
+.not-done:hover {
+    color : grey;
+}

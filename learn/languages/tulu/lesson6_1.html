@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Meta tags-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Bhashflix is a free and open source platform, dedicated towards teaching and documenting endangered languages from around the world.">
+        <meta name="keywords" content="Bhahshaflix , Bhasha , Flix , Learn Language , Learn , Lanaguages , Endangered Languages , The Shri Ram School , Rohan Kapur , Yuvaan M. Bery , Giya Sood , Maya Ghosh , Nitika Khungar , Dogri , Konkani , Tulu , Kurukh , Free , Open Source">
+        <meta name="author" content="Giya Sood , Maya Ghosh , Nitika Khungar , Rohan Kapur and Yuvaan M. Bery">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Firebase stuff-->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+        <script src="../../../firebasesetup.js"></script>
+
+        <!--Bootstrap & CSS-->
+        <link rel="stylesheet" href="../../../assets/bootstrap.css">
+        <link rel="stylesheet" href="../../../assets/fonts.css">
+        <link rel="stylesheet" href="../../../assets/navbar.css">
+        <link rel="stylesheet" href="intro.css">
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        
+        <!--Icons-->
+        <script src="https://kit.fontawesome.com/9f7fc9917e.js" crossorigin="anonymous" SameSite=None ></script>
+
+        <!--JS files-->
+        <script defer src="../../../navbar.js"></script>
+        <script defer src="lessons.js"></script>
+
+
+        <title>Bhashaflix</title>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-light navbar-default py-0" id="mainNav">
+            <div class="container-fluid ml-1 ml-xs-3 mx-md-5 mr-5 px-0">
+                <!--Dropdown-->
+                <div class=" d-md-none d-lg-none h-100 float-left mr-2" id="menu_icon_div">
+                    <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')) ; menu();" aria-label="Main Menu">
+                        <svg width="50" height="50" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                </div>
+
+                <a class="navbar-brand float-sm-left mr-auto header-title" id="navbar_title" href="https://bhashaflix.web.app">Bhashaflix</a>
+
+                <!--The row of links for big screens-->
+                <div class=" d-none d-md-flex align-middle" id="nav_options">
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" href="../../../aims" >Aims</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle" id="learn" href="../../learn/signin.html" >Learn</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="https://bit.ly/33Vl4zN" >Database</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " href="../../../help" >Help Us</a>
+                    <a class="nav-link by-3 px-0 px-md-3 px-sm-1 header-subtitle " id="login" href="../../signin.html" >Login</a>
+                    <div class="pl-4 row d-none d-md-flex">
+                        <a href="../../signin.html" class="col btn btn-outline-dark btn-sm px-3 align-self-center" role="button" id="sign_in">Sign Up</a>
+                    </div>
+                    <a class="my-auto d-none d-md-inline-block" href="../../settings.html">
+                        <img class=" my-auto ml-3 d-none rounded-circle " height="33" crossorigin="anonymous" src="..\..\..\assets\images\user-circle.svg" id="user_image">
+                    </a>
+                    <hr class="d-md-none border-dark rounded-pill">
+
+                </div>
+            </div> 
+        </nav>
+
+        <!--Header Stuff-->
+        <section>
+            <div class="container-fluid pt-4">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="lesson6_1.html">1</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson6_2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson6_3.html">3</a></li>
+                      <li class="page-item"><a class="page-link" href="lesson6_4.html">4</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="lesson6_2.html">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div >
+        </section>
+
+        <section>
+            <div class="container-fluid p-2 px-md-5">
+                <h1 class="mx-auto text-center subheading-font pb-3" id="title">Family</h1>
+                <p class="text-font px-1 px-md-3">
+                    A noun is a ‘naming word’, it either talks about a person, place, or thing. In a sentence, nouns can play the role of subject, direct object, indirect object, subject complement, object complement, appositive, or even an adjective. The most basic thread of any language, below is a comprehensive list of some basic Dogri nouns. Reliable sources dictate how “according to gender, Nouns are categorized masculine ‘Jagot’ (boy) and feminine ‘Kuti’ (girl) on the basis of number nouns are singular ‘raja’ (king) and plural ‘raja’ (kings). Nouns are countable ‘bakara’ (the goat) as well as uncoutable ‘pani’ (water) also.”
+                </p>
+            <img src="../../../assets/images/languages/dogri/family.jpeg" width="50%" class="mx-auto d-block pb-5">
+
+                <div class="table-responsive"> 
+                    <table class="table table-bordered table-hover table-condensed">
+                        <tbody><tr>
+                        <td>मा / मौरी</td>
+                        <td>éé /ma / mɔri/</td>
+                        <td>Mother</td>
+                        </tr>
+                        <tr>
+                        <td>बब्ब / प्यो</td>
+                        <td>/bəbbə/ /pjo/</td>
+                        <td>Father</td>
+                        </tr>
+                        <tr>
+                        <td>भ्रा</td>
+                        <td>/praʹ/</td>
+                        <td>Brother</td>
+                        </tr>
+                        <tr>
+                        <td>भैन</td>
+                        <td>/pἑn/</td>
+                        <td>Sister</td>
+                        </tr>
+                        <tr>
+                        <td>दादा</td>
+                        <td>/dada/</td>
+                        <td>Grand father</td>
+                        </tr>
+                        <tr>
+                        <td>दादी</td>
+                        <td>/dadi/</td>
+                        <td>Grand Mother</td>
+                        </tr>
+                        <tr>
+                        <td>चाचा</td>
+                        <td>/caca/</td>
+                        <td>Uncle (Father’s younger Brother)</td>
+                        </tr>
+                        <tr>
+                        <td>तातो / ताऊ</td>
+                        <td>/tato/ /tau/</td>
+                        <td>Uncle(father’s elder brother)</td>
+                        </tr>
+                        <tr>
+                        <td>चाची</td>
+                        <td>/caci/</td>
+                        <td>Aunt ( Father’s younger Brother’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>ताई</td>
+                        <td>/tai/</td>
+                        <td>Aunt (Father’s elder Brother’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>बुआ / फुफ्फेआ</td>
+                        <td>/būa/ /phūphphea/</td>
+                        <td>Aunt (Father’s Sister)</td>
+                        </tr>
+                        <tr>
+                        <td>फुफ्फड़ / फुफैआ</td>
+                        <td>/phūphphəṛ/ /phūphɛa/</td>
+                        <td>Uncle (Husband of father’s sister)</td>
+                        </tr>
+                        <tr>
+                        <td>नाना</td>
+                        <td>/nana/</td>
+                        <td>Maternal Grand Father</td>
+                        </tr>
+                        <tr>
+                        <td>नानी</td>
+                        <td>/nani/</td>
+                        <td>Maternal Grand Mother</td>
+                        </tr>
+                        <tr>
+                        <td>मामा</td>
+                        <td>/mama/</td>
+                        <td>Maternal Uncle ( mother’s brother)</td>
+                        </tr>
+                        <tr>
+                        <td>मामी</td>
+                        <td>/mami/</td>
+                        <td>Aunt ( Mother’s Brother’s Wife)</td>
+                        </tr>
+                        <tr>
+                        <td>मासड़ / मसैआ</td>
+                        <td>/masəṛ/</td>
+                        <td>Uncle (Mother’s Sister’s Husband)</td>
+                        </tr>
+                        <tr>
+                        <td>मासी</td>
+                        <td>/masi/</td>
+                        <td>Aunt (mother’s sisters)</td>
+                        </tr>
+                        <tr>
+                        <td>सौह्रा</td>
+                        <td> </td>
+                        <td>Father-in-law (Husband’s Father/ Wife’s Father)</td>
+                        </tr>
+                        <tr>
+                        <td>सस्स</td>
+                        <td>/səssə/</td>
+                        <td>Mother-in-law (Husband’s Mother/ Wife’s Mother)</td>
+                        </tr>
+                        <tr>
+                        <td>जेठ</td>
+                        <td>/jəʈh/</td>
+                        <td>Brother -in -law. (Husband’s elder Brother)</td>
+                        </tr>
+                        <tr>
+                        <td>जठानी</td>
+                        <td>/jəʈhani/</td>
+                        <td>Sister- in-law. (Husband’s elder Brother’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>देर</td>
+                        <td>/der/</td>
+                        <td>Brother- in- law. (Husband’s younger Brother)</td>
+                        </tr>
+                        <tr>
+                        <td>दरानी</td>
+                        <td>/derani/</td>
+                        <td>Sister- in- law. (Husband’s younger brother’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>ननान / ननद</td>
+                        <td>/nənən/ /nənəd/</td>
+                        <td>sister- in- law (Husband’s sister)</td>
+                        </tr>
+                        <tr>
+                        <td>ननोइया / ननदोई</td>
+                        <td>/nənoia/ /nənədoi/</td>
+                        <td>Husband’s sister’s husband.</td>
+                        </tr>
+                        <tr>
+                        <td>साला</td>
+                        <td>/sala/</td>
+                        <td>Brother- in- law. (Wife’s Brother)</td>
+                        </tr>
+                        <tr>
+                        <td>सालेहार</td>
+                        <td>/saleàr/</td>
+                        <td>Sister- in- law (Wife’s Brother’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>साली</td>
+                        <td>/sali/</td>
+                        <td>Sister- in -law (Wife’s sister)</td>
+                        </tr>
+                        <tr>
+                        <td>साढू</td>
+                        <td>/sàɖu/</td>
+                        <td>Brother-in- law (Wife’s sister’s Husband)</td>
+                        </tr>
+                        <tr>
+                        <td>पुत्तर</td>
+                        <td>/pūttər/</td>
+                        <td>Son</td>
+                        </tr>
+                        <tr>
+                        <td>नूंह्</td>
+                        <td>/nũ ʹ/</td>
+                        <td>Daughter- in- law</td>
+                        </tr>
+                        <tr>
+                        <td>धी</td>
+                        <td>/tì/</td>
+                        <td>Daughter</td>
+                        </tr>
+                        <tr>
+                        <td>जोआई</td>
+                        <td>/joai/</td>
+                        <td>Son- in- law.</td>
+                        </tr>
+                        <tr>
+                        <td>जठूतर / जठीआ</td>
+                        <td>/jəʈhūttər/ /jəʈhia/</td>
+                        <td>Nephew (Husband’s elder brother’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>जठूतरी / जठीऽ</td>
+                        <td>/jəʈhūttəri/ /jəʈhi/</td>
+                        <td>Niece (Husband’s elder brother’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>दरूतर</td>
+                        <td>/dərūttər/</td>
+                        <td>Nephew (Husband’s younger brother’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>दरूतरी / दरीऽ</td>
+                        <td>/dərūttəri/ /dəri:/</td>
+                        <td>Niece (Husband’s younger brother’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>पोत्तरा</td>
+                        <td>/pottəra/</td>
+                        <td>Grand Son(Son’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>पोत्तरी</td>
+                        <td>/pottəri/</td>
+                        <td>Grand Daughter(Son’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>पड़ोतरा</td>
+                        <td>/pəɖotəra/</td>
+                        <td>Great Grand Son (Grand Son’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>पड़ोतरी</td>
+                        <td>/pəɖotəri/</td>
+                        <td>Great Grand Daughter (Grand son’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>दोह्तरा</td>
+                        <td>/do ʹtəra/</td>
+                        <td>Grand son( daughter’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>दोह्तरी</td>
+                        <td>/do ʹtəri/</td>
+                        <td>Grand daughter( daugther’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>भनेआ</td>
+                        <td>/pəʹnea/</td>
+                        <td>Nephew (Sister’s Son)</td>
+                        </tr>
+                        <tr>
+                        <td>भनेई</td>
+                        <td>/pəʹnei/</td>
+                        <td>Niece (Sister’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>तयेरा / तैह्रा</td>
+                        <td>/təjera/ /tɛ ʹra/</td>
+                        <td>Cousin(male) (Father’s elder Brother’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>तयेरी</td>
+                        <td>/təjeri/</td>
+                        <td>Cousin(Female) Father’s elder brother’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>चचोरा</td>
+                        <td>/cəcera/</td>
+                        <td>cousin(Male) Father’s younger brother’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>चचोरी</td>
+                        <td>/cəceri/</td>
+                        <td>Cousin (Female) Father’s younger brother’s)</td>
+                        </tr>
+                        <tr>
+                        <td>ममेरा</td>
+                        <td>/məmera/</td>
+                        <td>Cousin(Male) Mother’s brother’s son,</td>
+                        </tr>
+                        <tr>
+                        <td>ममेरी</td>
+                        <td>/məmeri/</td>
+                        <td>Cousin(Female) (Mother’s brother’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>मसेरा</td>
+                        <td>/məsera/</td>
+                        <td>Cousin(Male) (Mother’s sister’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>मसेरी</td>
+                        <td>/məsəri/</td>
+                        <td>Cousin(Female) (Mother’s sister’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>फफेरा</td>
+                        <td>/phəphera/</td>
+                        <td>cousin(Male) (Father’s sister’s son)</td>
+                        </tr>
+                        <tr>
+                        <td>फफेरी</td>
+                        <td>/phəpheri/</td>
+                        <td>cousin(Female) (Father’s sister’s daughter)</td>
+                        </tr>
+                        <tr>
+                        <td>तैह्रा</td>
+                        <td>/tɛ ʹra/</td>
+                        <td>Uncle- in- law ( Father-in-law’s elder brother)</td>
+                        </tr>
+                        <tr>
+                        <td>तैतस / तैह्स</td>
+                        <td>/tɛtəs/ /tɛ ʹs/</td>
+                        <td>Aunt- in- law (Father- in- law’s elder brother’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>पतरौह्रा</td>
+                        <td>/pətərɔ ʹra/</td>
+                        <td>Uncle- in –law ( Father -in -law’s younger brother)</td>
+                        </tr>
+                        <tr>
+                        <td>पितरस</td>
+                        <td>/pitərəs/</td>
+                        <td>Aunt-in- law( Father-in-laws younger brother’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>फफेस</td>
+                        <td>/phəphes/</td>
+                        <td>Aunt- in- law( father- in- law’s sister)</td>
+                        </tr>
+                        <tr>
+                        <td>फफेसड़ा</td>
+                        <td>/phəphesəṛa/</td>
+                        <td>Uncle- in- law (Father-in-law’s sister’s husband)</td>
+                        </tr>
+                        <tr>
+                        <td>माह्लरा</td>
+                        <td>/màləra</td>
+                        <td>Maternal Uncle- in- law( mother- in- law’s brother/ husband’s maternal uncle)</td>
+                        </tr>
+                        <tr>
+                        <td>ममेस / ममेआस</td>
+                        <td>/məmes/ /məmeas/</td>
+                        <td>Maternal aunt- in –law( Maternal uncle- in- law’s wife)</td>
+                        </tr>
+                        <tr>
+                        <td>मसेस</td>
+                        <td>/məses/</td>
+                        <td>Aunt- in- law ( mother-in-law’s sister)</td>
+                        </tr>
+                        <tr>
+                        <td>मसेसड़ा</td>
+                        <td>/məsesṛa/</td>
+                        <td>uncle –in- law (Mother- in -law’s sister’ husband)</td>
+                        </tr>
+                        <tr>
+                        <td>ददेसड़ा</td>
+                        <td>/dədesəṛa/</td>
+                        <td>Great Grand Father- in-law (father-in-law’s father)</td>
+                        </tr>
+                        <tr>
+                        <td>ददेस</td>
+                        <td>/dədes/</td>
+                        <td>Great Grand Mother-in-law (father-in-law’s mother)</td>
+                        </tr>
+                        <tr>
+                        <td>कुड़मनी / ब्याह्न</td>
+                        <td>/kūṛməni/ /bjàn/</td>
+                        <td>Son’s /daughter’s Mother- in- law</td>
+                        </tr>
+                        <tr>
+                        <td>कुड़म / ब्याही</td>
+                        <td>/kūṛəm/ /bjài/</td>
+                        <td>Son’s/ daughter’s Father- in -Law</td>
+                        </tr>
+                        <tr>
+                        <td>खसम / मर्हाज /धरैआह्ला /मदेई</td>
+                        <td>/kəsəm/ /məràj/kəʹreàla /mədei</td>
+                        <td>Husband</td>
+                        </tr>
+                        <tr>
+                        <td>त्रीमत / लाड़ी /धरैआह्ली</td>
+                        <td>/trimət/ laṛi / kəʹrʹeàli</td>
+                        <td>Wife</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container-fluid mt-4 bg-primary">
+                <div class="text-center pt-4">
+                    <div class="btn-group mx-auto d-inline-block" id="footer-icons">
+                            <a href="mailto:bhashaflix@gmail.com" class=" btn btn-social btn-email rounded-circle mx-1 mx-md-3">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                            <a href="https://www.facebook.com/bhasha.flix" class=" btn btn-social btn-facebook rounded-circle mx-1 mx-md-3">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/bhashaflix/?hl=en" class=" btn btn-social btn-instagram rounded-circle mx-1 mx-md-3">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://twitter.com/bhashaflix" class=" btn btn-social btn-twitter rounded-circle mx-1 mx-md-3">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+
+                            <a href="https://github.com/adadarohan/bhashaflix" class=" btn btn-social btn-youtube rounded-circle mx-1 mx-md-3">
+                                <i class="fab fa-github"></i>
+                            </a>
+                    </div>
+                </div>
+                <p class="text-2-font text-center text-white mx-auto pt-4 m-0 pb-2">&copy; Bhashaflix 2020. All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>
