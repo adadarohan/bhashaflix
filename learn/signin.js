@@ -23,7 +23,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'redirect',
-    signInSuccessUrl: 'index.html',
+    signInSuccessUrl: 'https://bhashaflix.web.app/learn',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -32,7 +32,7 @@ var uiConfig = {
     // Terms of service url.
     tosUrl: '<your-tos-url>',
     // Privacy policy url.
-    privacyPolicyUrl: '<your-privacy-policy-url>'
+    privacyPolicyUrl: '../legal/privacy-policy.html'
 };
 
 
@@ -40,10 +40,9 @@ var uiConfig = {
 ui.start('#firebaseui-auth-container', uiConfig);
 
 
-/*
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         window.location = 'index.html';
     }
 })
-*/
