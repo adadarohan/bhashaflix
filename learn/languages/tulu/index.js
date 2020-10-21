@@ -7,8 +7,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         usersRef.get().then((querySnapshot) => {
             //CHANGE LANG NAME
             var lnum = querySnapshot.data().tulu
-            if(lnum < lessons[1].length ) {
-                document.getElementById("next_up").innerHTML = lessons[1][lnum] ;
+            if(lnum < lessons[2].length ) {
+                document.getElementById("next_up").innerHTML = lessons[2][lnum] ;
                 document.getElementById("next_up_row").classList.remove("d-none");
                 plus = lnum + 1
                 document.getElementById("next_up_href").href = "lesson" + plus.toString() + "_1.html";
