@@ -5,3 +5,13 @@
 #main {
     min-height : 70vh ;
 }
+
+.top-pic {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .top-pic {
+        width: 50%;
+    }
+}
